@@ -69,20 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     renderDestinations(filtered);
   };
-  
-  document.getElementById('search-input').addEventListener('input', e => {
-    const term = e.target.value.toLowerCase();
-    const filtered = destinations.filter(d => 
-      d.name.toLowerCase().includes(term) || d.country.toLowerCase().includes(term)
-    );
-    renderDestinations(filtered);
-  });
 
-  document.getElementById('continent-filter').addEventListener('change', e => {
-    const continent = e.target.value;
-    const filtered = continent ? destinations.filter(d => d.continent === continent) : destinations;
-    renderDestinations(filtered);
-  });
+  document.getElementById('search-input').addEventListener('input', applyFilters);
+  document.getElementById('continent-filter').addEventListener('change', applyFilters);
 
   window.sortByCost = () => {
     const sorted = [...destinations].sort((a,b) => a.costMed - b.costMed);
