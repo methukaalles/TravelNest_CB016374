@@ -13,7 +13,7 @@ const trips = [
   { title: "Tokyo Cultural Journey", type: "cultural", budget: "high", country: "Japan", days: "8" },
   { title: "Banff Mountain Escape", type: "nature", budget: "medium", country: "Canada", days: "6" },
   { title: "Marrakech Souk Explorer", type: "cultural", budget: "low", country: "Morocco", days: "5" },
-  { title: "Sri Dalada Maligawa", type: "cultural", budget: "low", country: "Sri Lanka", days: "5" },
+  { title: "Temple of the Sacred Tooth", type: "cultural", budget: "low", country: "Sri Lanka", days: "5" },
   { title: "Bali Beach Bliss", type: "relaxation", budget: "low", country: "Indonesia", days: "7" },
   { title: "Barcelona Art & Food", type: "cultural", budget: "medium", country: "Spain", days: "5" },
   { title: "Maldives Paradise", type: "relaxation", budget: "high", country: "Maldives", days: "7" },
