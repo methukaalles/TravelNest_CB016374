@@ -49,6 +49,21 @@ window.closeModal = () => document.getElementById('destination-modal').style.dis
 document.addEventListener('DOMContentLoaded', () => {
   renderDestinations(destinations);
 
+  const applyFilters = () => {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const continent = document.getElementById('continent-filter').value;
+    
+    let filtered = destinations.filter(d => {
+      const matchesSearch = searchTerm === '' || 
+        d.name.toLowerCase().includes(searchTerm) || 
+        d.country.toLowerCase().includes(searchTerm);
+      const matchesContinent = continent === '' || d.continent === continent;
+      return matchesSearch && matchesContinent;
+    });
+    
+    renderDestinations(filtered);
+  };
+  
   document.getElementById('search-input').addEventListener('input', e => {
     const term = e.target.value.toLowerCase();
     const filtered = destinations.filter(d => 
