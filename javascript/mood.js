@@ -8,14 +8,18 @@ if (hamburgerBtn && navigationLinks) {
 const destinations = [
   "Santorini, Greece",
   "Machu Picchu, Peru",
+  "Paris, France",
   "Tokyo, Japan",
-  "Banff, Canada",
+  "Vancouver, Canada",
   "Marrakech, Morocco",
-  "Kandy, Sri Lanka",
+  "Colombo, Sri Lanka",
   "Bali, Indonesia",
   "Barcelona, Spain",
-  "Maldives",
-  "New York, USA"
+  "Male, Maldives",
+  "Dubai, UAE",
+  "New York, USA",
+  "Sydney, Australia",
+  "Rio de Janerio, Brazil"
 ];
 
 let currentAudio = null;
