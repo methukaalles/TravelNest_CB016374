@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TravelNest - Explore destinations, plan trips, track itineraries, and manage travel inspiration in one place.">
+    <title>TravelNest | Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- PWA support -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <script src="javascript/index.js" defer></script>
+</head>
+<body>
+    
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "index.html">
+                    <img src="images/TravelNest.png" alt="TravelNest Logo" width="156" height="100">
+                </a>
+                <!--Fallback text-->
+                <h2 style="display:none;">TravelNest</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="explorer.html">Destination Explorer</a></li>
+                <li><a href="planner.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- auto-rotating quotes + grid layout -->
+        <section class="hero-grid">
+            <div class="hero-text">
+                <h1>Explore.<br>Plan.<br>Adventure.</h1>
+                <p>The world is waiting. Discover destinations, craft perfect itineraries, and turn every trip into an unforgettable story.</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/relaxation.jpg" alt="Epic travel destination" id="hero-bg">
+            </div>
+        </section>
+
+        <!-- TRAVEL QUOTES ROTATOR -->
+        <section style="max-width:1200px;margin:3rem auto;padding:0 1rem;text-align:center;">
+            <h2 style="margin-bottom:1rem;">Travel Inspiration</h2>
+            <div id="quote-container" style="max-width:700px;margin:0 auto;background:#fff;padding:2rem;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.05);">
+                <p id="travel-quote" style="font-size:1.4rem;font-style:italic;line-height:1.4;color:#222;margin-bottom:1rem;"></p>
+                <p id="quote-author" style="color:#0284c8;font-weight:600;"></p>
+            </div>
+        </section>
+
+        <!-- DESTINATION OF THE DAY -->
+        <section class="featured-author" style="max-width:1200px;margin:3rem auto;padding:2rem 1rem;background:#fff;box-shadow:0 5px 15px rgba(0,0,0,0.05);">
+            <h2 style="text-align:center;margin-bottom:1.5rem;">Destination of the Day</h2>
+            <div class="author-card" style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap;justify-content:center;">
+                <img id="daily-image" src="" alt="" style="width:220px;height:220px;border-radius:50%;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                <div class="author-info">
+                    <h3 id="daily-name" style="font-size:2.2rem;margin-bottom:0.5rem;"></h3>
+                    <p id="daily-country" style="font-size:1.3rem;color:#555;margin-bottom:1rem;"></p>
+                    <p id="daily-description" style="max-width:420px;line-height:1.6;"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <form id="newsletter-form" style="margin-bottom:1.5rem;">
+                <div style="display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;">
+                    <input type="email" id="newsletter-email" placeholder="Get travel tips in your inbox" required style="padding:0.7rem 1rem;width:280px;border:none;border-radius:4px;">
+                    <button type="submit" id="subscribe-button" style="padding:0 1.5rem;background:#0284c8;color:#fff;border:none;border-radius:4px;cursor:pointer;">Subscribe</button>
+                </div>
+            </form>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="planner.html">Budget Planner</a>
+                <a href="generator.html">Trip Generator</a>
+                <a href="mood.html">Travel Mood</a>
+                <a href="feedback.html">Feedback</a>
+            </nav>
+            <p class="footer-text">© 2026 TravelNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Inline minimal script for demo (full logic in javascript/index.js)
+        console.log('%c✅ TravelNest Home loaded successfully!', 'color:#0284c8;font-size:1rem');
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Destination Explorer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/explorer.css">
+    <script src="javascript/explorer.js" defer></script>
+    <link rel="icon" href="images/icon.png" type="image/png">
+</head>
+<body>
+    
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "index.html">
+                    <img src="images/TravelNest.png" alt="TravelNest Logo" width="156" height="100">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html" class="active">Destination Explorer</a></li>
+                <li><a href="planner.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Discover Destinations</h1>
+        <p class="lead">Filter, search, and explore hand-picked places around the world.</p>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;">
+            <input type="text" id="search-input" placeholder="Search destinations..." style="flex:1;min-width:220px;">
+            <select id="continent-filter" style="flex:1;min-width:180px;">
+                <option value="">All Continents</option>
+                <option value="Europe">Europe</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="North America">North America</option>
+                <option value="South America">South America</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+            <button id="sort-btn" onclick="sortByCost()">Sort by Avg. Cost ↑</button>
+        </div>
+
+        <div id="destination-grid" class="book-grid"></div>
+    </main>
+
+    <!-- MODAL (for card click) -->
+    <div id="destination-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;z-index:9999;">
+        <div style="background:#fff;max-width:700px;width:90%;border-radius:12px;overflow:hidden;max-height:90vh;overflow-y:auto;">
+            <div style="padding:1.5rem;position:relative;">
+                <button onclick="closeModal()" style="position:absolute;top:15px;right:20px;background:linear-gradient(135deg, #0284c8, #0ea5e9);color:#fff;border:none;font-size:1.8rem;cursor:pointer;width:40px;height:40px;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(2, 132, 200, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">×</button>
+                <img id="modal-image" style="width:100%;height:320px;object-fit:cover;border-radius:8px;" alt="">
+                <h2 id="modal-name" style="margin:1rem 0 0.5rem;"></h2>
+                <p id="modal-country" style="color:#0284c8;font-weight:600;"></p>
+                <p id="modal-description" style="line-height:1.7;margin:1.5rem 0;"></p>
+                <h3>Popular Attractions</h3>
+                <ul id="modal-attractions" style="margin:1rem 0 2rem;padding-left:1.5rem;"></ul>
+                <h3>Travel Cost Comparison</h3>
+                <table id="modal-cost-table" style="width:70%;border-collapse:collapse;margin-top:1rem;"></table>
+                <button onclick="closeModal()" style="margin-top:2rem;background:linear-gradient(135deg, #0284c8, #0ea5e9);color:#fff;padding:0.8rem 2rem;border:none;border-radius:8px;cursor:pointer;font-weight:600;transition:transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(2, 132, 200, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <form id="newsletter-form" style="margin-bottom:1.5rem;">
+                <div style="display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;">
+                    <input type="email" id="newsletter-email" placeholder="Get travel tips in your inbox" required style="padding:0.7rem 1rem;width:280px;border:none;border-radius:4px;">
+                    <button type="submit" id="subscribe-button" style="padding:0 1.5rem;background:#0284c8;color:#fff;border:none;border-radius:4px;cursor:pointer;">Subscribe</button>
+                </div>
+            </form>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="planner.html">Budget Planner</a>
+                <a href="generator.html">Trip Generator</a>
+                <a href="mood.html">Travel Mood</a>
+                <a href="feedback.html">Feedback</a>
+            </nav>
+            <p class="footer-text">© 2026 TravelNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

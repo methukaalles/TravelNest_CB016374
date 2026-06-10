@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Travel Mood</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/flow.css">
+    <script src="javascript/mood.js" defer></script>
+    <link rel="icon" href="images/icon.png" type="image/png">
+</head>
+<body>
+    
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "index.html">
+                    <img src="images/TravelNest.png" alt="TravelNest Logo" width="156" height="100">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Destination Explorer</a></li>
+                <li><a href="planner.html">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html" class="active">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Travel Mood</h1>
+        <p class="lead">Set the vibe and track your journey.</p>
+
+        <div class="flow-container">
+            <!-- Ambient Sounds -->
+            <div class="cozy-sound-section">
+                <h2>Ambient Travel Sounds</h2>
+                <button id="play-beach-btn">🌊 Beach Waves</button>
+                <button id="play-forest-btn">🌲 Forest Rain</button>
+                <button id="play-city-btn">🏙️ City Hustle</button>
+                <button id="stop-sound-btn" disabled>Stop Sound</button>
+                <audio id="ambient-audio" loop></audio>
+            </div>
+
+            <!-- Visited / Planned Tracker -->
+            <div class="completed-books-section">
+                <h2>Visited Destinations</h2>
+                <form id="add-visited-form">
+                    <select id="visited-select"></select>
+                    <button type="submit">Mark as Visited</button>
+                </form>
+                <ul id="visited-list"></ul>
+            </div>
+        </div>
+    </main>
+
+    <footer><div class="footer-content">
+            <form id="newsletter-form" style="margin-bottom:1.5rem;">
+                <div style="display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;">
+                    <input type="email" id="newsletter-email" placeholder="Get travel tips in your inbox" required style="padding:0.7rem 1rem;width:280px;border:none;border-radius:4px;">
+                    <button type="submit" id="subscribe-button" style="padding:0 1.5rem;background:#0284c8;color:#fff;border:none;border-radius:4px;cursor:pointer;">Subscribe</button>
+                </div>
+            </form>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="planner.html">Budget Planner</a>
+                <a href="generator.html">Trip Generator</a>
+                <a href="mood.html">Travel Mood</a>
+                <a href="feedback.html">Feedback</a>
+            </nav>
+            <p class="footer-text">© 2026 TravelNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

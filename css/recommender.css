@@ -1,0 +1,171 @@
+.page-content { 
+  max-width: 700px; 
+  margin: 2rem auto; 
+  padding: 2rem; 
+  background: #fff; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.page-content .lead {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.recommender-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.recommender-controls select,
+.recommender-controls button {
+  padding: 0.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 150px;
+}
+
+.recommender-controls select {
+  background: white;
+  cursor: pointer;
+}
+
+.recommender-controls select:focus {
+  outline: none;
+  border-color: #0284c8;
+  box-shadow: 0 0 0 3px rgba(2, 132, 200, 0.1);
+}
+
+.recommender-controls button {
+  background: linear-gradient(135deg, #0284c8, #0ea5e9);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recommender-controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(2, 132, 200, 0.3);
+}
+
+.recommendation-area {
+  margin: 2rem 0;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendation-card {
+  background: linear-gradient(135deg, #f0f7ff, #e0f2fe);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(2, 132, 200, 0.1);
+  border-left: 4px solid #0284c8;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recommendation-card h3 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.recommendation-card p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+#pick-btn, #pick-again-btn, #save-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#pick-btn {
+  background: linear-gradient(135deg, #0284c8, #0ea5e9);
+  color: white;
+}
+
+#pick-again-btn, #save-btn {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  color: white;
+}
+
+#pick-btn:hover, #pick-again-btn:hover, #save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.saved-list {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.saved-list h2 {
+  color: #0f172a;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0284c8;
+  padding-bottom: 0.5rem;
+}
+
+.saved-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.saved-list li {
+  padding: 0.8rem;
+  background: white;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  border-left: 3px solid #0284c8;
+  transition: transform 0.2s ease;
+}
+
+.saved-list li:hover {
+  transform: translateX(5px);
+}

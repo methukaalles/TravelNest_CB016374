@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Budget Planner</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tracker.css">
+    <script src="javascript/planner.js" defer></script>
+    <link rel="icon" href="images/icon.png" type="image/png">
+</head>
+<body>
+   
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href = "index.html">
+                    <img src="images/TravelNest.png" alt="TravelNest Logo" width="156" height="100">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorer.html">Destination Explorer</a></li>
+                <li><a href="planner.html" class="active">Budget Planner</a></li>
+                <li><a href="generator.html">Trip Generator</a></li>
+                <li><a href="mood.html">Travel Mood</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Trip Budget Planner</h1>
+        <p class="lead">Calculate, track, and save your perfect travel budget.</p>
+
+        <div class="tracker-container">
+            
+            <div class="add-book-section">
+                <h2>Plan a New Trip</h2>
+                <form id="add-trip-form">
+                    <select id="trip-destination" required></select>
+                    <input type="number" id="trip-days" placeholder="Number of days" min="1" required>
+                    <input type="number" id="daily-budget" placeholder="Daily budget ($)" min="1" required>
+                    <button type="submit">Calculate Total</button>
+                </form>
+            </div>
+
+            <div class="books-list-section">
+                <h2>Your Trip Summary</h2>
+                <div id="budget-results" style="display:none;">
+                    <div class="progress-bar"><div id="budget-fill" class="progress-fill"></div></div>
+                    <p id="total-cost"></p>
+                    <p id="budget-status" style="font-weight:600;"></p>
+                    <button id="save-trip-btn">Save to My Trips</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   
+    <footer><div class="footer-content">
+            <form id="newsletter-form" style="margin-bottom:1.5rem;">
+                <div style="display:flex;justify-content:center;gap:0.5rem;flex-wrap:wrap;">
+                    <input type="email" id="newsletter-email" placeholder="Get travel tips in your inbox" required style="padding:0.7rem 1rem;width:280px;border:none;border-radius:4px;">
+                    <button type="submit" id="subscribe-button" style="padding:0 1.5rem;background:#0284c8;color:#fff;border:none;border-radius:4px;cursor:pointer;">Subscribe</button>
+                </div>
+            </form>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="explorer.html">Explorer</a>
+                <a href="planner.html">Budget Planner</a>
+                <a href="generator.html">Trip Generator</a>
+                <a href="mood.html">Travel Mood</a>
+                <a href="feedback.html">Feedback</a>
+            </nav>
+            <p class="footer-text">© 2026 TravelNest. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
